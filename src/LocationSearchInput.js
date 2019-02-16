@@ -55,7 +55,10 @@ export class LocationSearchInput extends React.Component {
         super(props);
         this.state = {address: ''};
     }
+    getnewLocation = (lat, lon) => {
 
+
+    }
     handleChange = address => {
         this.setState({address});
     };
@@ -65,7 +68,7 @@ export class LocationSearchInput extends React.Component {
             .then(results => getLatLng(results[0]))
             .then(latLng => {
                 console.log('Success', latLng);
-                this.props.getWeatherData(latLng.lat, latLng.lng);
+                this.getnewLocation(latLng.lat, latLng.lng);
                 this.setState({address: ''});
             })
             .catch(error => console.error('Error', error));
@@ -118,10 +121,6 @@ export class LocationSearchInput extends React.Component {
                     google={this.props.google}
                     zoom={14}
                     style={mapStyles}
-                    initialCenter={{
-                        lat: 43.6532,
-                        lng: -79.3832,
-                    }}
                 >
 
                     <Marker onClick={this.onMarkerClick}
