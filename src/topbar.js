@@ -43,7 +43,7 @@ class TopBar extends React.Component{
 	render()
 	{
 		const { anchorEl } = this.state;
-		const { open } = this.state;
+
 		return(
 
 			<div id = "topNav">
@@ -53,16 +53,16 @@ class TopBar extends React.Component{
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
 									    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
-						            		<Tab label = "Articles" />
+						            		<Tab label = "Articles" value={0} />
 						            	</Link>	
 
 									    <Link to="/Resources" style= {{color: 'white',fontFamily: 'Ubuntu', fontweight:'500', textDecoration:'none'}}>
-						            		<Tab label = "Resources" />
+						            		<Tab label = "Resources" value={0} />
 						            	</Link>
 
 
 						            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
-						            		<Tab label = "Forum" />
+						            		<Tab label = "Forum" value={0} />
 						            	</Link> 
 						            </Grid>
 								

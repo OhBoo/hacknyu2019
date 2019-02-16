@@ -83,7 +83,8 @@ export default class Resources extends Component {
                                 <ResourceTitle>Teen Clinics</ResourceTitle>
                                 <Resource>
                                     <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/std/teens-clinics.pdf"
-                                       target="_blank">
+                                       target="_blank"
+                                       rel="noopener noreferrer" >
                                         <ImgStyle src={Teens}/>
                                     </a>
                                 </Resource>
@@ -110,7 +111,7 @@ export default class Resources extends Component {
                             <ResourceContentDiv>
                                 <ResourceTitle>The Hetrick-Martin Institute</ResourceTitle>
                                 <Resource>
-                                    <a href="https://hmi.org/" target="_blank">
+                                    <a href="https://hmi.org/" target="_blank" rel="noopener noreferrer">
                                         <ImgStyle src={HMI}/>
                                     </a>
 
@@ -124,7 +125,7 @@ export default class Resources extends Component {
                                 <ResourceTitle>Planned Parenthood</ResourceTitle>
                                 <Resource>
                                     <a href="https://www.plannedparenthood.org/online-tools/what-right-birth-control-me"
-                                       target="_blank">
+                                       target="_blank" rel="noopener noreferrer">
                                         <ImgStyle src={PP}/>
                                     </a>
                                 </Resource>
@@ -151,7 +152,7 @@ export default class Resources extends Component {
                             <ResourceContentDiv>
                                 <ResourceTitle>Cindy Lee Alves</ResourceTitle>
                                 <Resource>
-                                    <a href="https://www.cindyleealves.com/" target="_blank">
+                                    <a href="https://www.cindyleealves.com/" target="_blank" rel="noopener noreferrer">
                                         <ImgStyle src={Education}/>
                                     </a>
                                 </Resource>
