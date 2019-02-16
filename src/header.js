@@ -22,13 +22,13 @@ class Header extends React.Component{
 	{
 		return(
 
-			<div id = "pageTop" style = {style}>	
+			<div id = "pageTop" style = {style}>
 					<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
 
 						<Hidden xsDown>
 							<Grid item sm = {2} style = {{display: 'flex'}} >
 									<Link to  = "/">
-										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6" 
+										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
 											alt = "chicken"
 											 style = {{
 											maxWidth: '70%',
@@ -66,14 +66,15 @@ class Header extends React.Component{
 								</Grid>
 							</Grid>
 						</Hidden>
-
+						<div>
 						<Grid item sm = {6}>
 							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
 									Tendr
 							</Typography>
 						</Grid>
+						</div>
 				</Grid>
-			</div>	
+			</div>
 		)
 	}
 }
