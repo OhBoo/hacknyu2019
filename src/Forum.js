@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Header from './header';
 import TopBar from "./topbar";
-import answer_forum_form from "./answer_forum_form";
 
 export default class Forum extends Component {
     constructor(props) {
