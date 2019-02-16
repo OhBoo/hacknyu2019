@@ -33,7 +33,6 @@ export default class App extends Component {
                 <div>
                     <Route exact path='' component={Home}/>
                     <Route exact path='/ClinicsNearby' component ={Articles}/>
-                    <Route exact path='/LGBT' component={LGBT}/>
                     <Route exact path='/SexHealthResources' component={Forum}/>
                     <Route exact path='/Relationships' component={Resources}/>
                 </div>
