@@ -19,41 +19,13 @@ const ButtonDiv = styled.div`
 `;
 
 export default class App extends Component {
-
-<<<<<<< HEAD
-    }
-
-=======
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
     render() {
         const Home = () => (
             <Container>
                 <Header/>
                 <LocationSearchInput/>
 
-<<<<<<< HEAD
-                <div style={{padding:70}}>
-                    <Grid style={{height:500}} container spacing={32} direction="row" align="center" >
-                        <Grid item md zeroMinWidth>
-                            <a href="http://localhost:3000/Articles">
-                                <img src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg" width="360" height="180" />
-                            </a>
-                            <h2> Articles </h2>
-                        </Grid>
 
-                        <Grid item md zeroMinWidth>
-                            <a href="http://localhost:3000/Resources">
-                                <img src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg" width="360" height="180" />
-                            </a>
-                            <h2> Resources </h2>
-                        </Grid>
-
-                        <Grid item md zeroMinWidth>
-                            <a href="http://localhost:3000/Forum">
-                                <img src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg" width="360" height="180" />
-                            </a>
-                            <h2> Forum </h2>
-=======
                 <ButtonDiv>
                     <div style={{padding: 70}}>
                         <Grid style={{height: 500}} container spacing={32} direction="row" align="center">
@@ -83,7 +55,6 @@ export default class App extends Component {
                                 </a>
                                 <h2> Forum </h2>
                             </Grid>
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
                         </Grid>
                     </div>
                 </ButtonDiv>

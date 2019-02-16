@@ -1,18 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
-
-<<<<<<< HEAD
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-=======
 import Typography from '@material-ui/core/Typography';
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
 
 import Grid from '@material-ui/core/Grid';
 
@@ -28,7 +17,7 @@ const colors = {
   pastelgrey:'#C7C8C4',
 }
 
-class Header extends React.Component{
+export default class Header extends React.Component{
 
 	state = {
         anchorEl: null,
@@ -44,30 +33,12 @@ handleClose = () => {
 	{
 		 const { anchorEl } = this.state;
 		return(
-<<<<<<< HEAD
-			<div id = "pageTop" style = {style}>	
-				<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
-					<Hidden xsDown>
-						<Grid item sm = {2} style = {{display: 'flex'}} >
-							<Link to  = "/">
-								<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6" 
-								style = {{
-									maxWidth: '70%',
-									verticalAlign: 'middle',
-									justifyContent: 'center',
-									display: 'block',
-									marginTop: 'auto',
-							 		marginBottom: 'auto'
-								}}
-								/>
-							</Link>
-						</Grid>
-					</Hidden>
-=======
+
+
 
 			<div id = "pageTop" style = {style}>
 					<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
+
 
 					<Hidden smUp>
 						<Grid container spacing = {12}>
@@ -76,22 +47,19 @@ handleClose = () => {
 								<center>
 									<Link to  = "/">
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
-<<<<<<< HEAD
 										style = {{
 											maxWidth: '4%',
-=======
 											alt = "chicken"
-											 style = {{
 											maxWidth: '70%',
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
 											verticalAlign: 'middle',
 											marginTop: 15
 										}}
+
 										/>
 									</Link>
 								</center>
 							</Grid>
-<<<<<<< HEAD
+
 						</Grid>
 					</Hidden>
 
@@ -116,8 +84,6 @@ handleClose = () => {
 			          <MenuItem onClick={this.handleClose}>Resources</MenuItem>
 			          <MenuItem onClick={this.handleClose}>Forum</MenuItem>
 			        </Menu>
-=======
-						</Hidden>
 						<Hidden smUp>
 							<Grid container spacing = {12}>
 
@@ -149,12 +115,12 @@ handleClose = () => {
 							</Typography>
 						</Grid>
 						</div>
->>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
+
 				</Grid>
 			</div>
 		)
 	}
 }
 
-export default Header;
+
 
