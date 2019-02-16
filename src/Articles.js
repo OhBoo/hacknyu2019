@@ -5,7 +5,7 @@ import Header from './header';
 import TopBar from "./topbar";
 
 const PageTitle = styled.h1`
-    margin-left: 3%;
+    margin-left: 2%;
     font-size: 2.5em;
     margin-bottom: 0;
     font-family: Ubuntu;
@@ -47,7 +47,7 @@ const ArticleVidDiv = styled.div`
     margin-left: 5%;
 `;
 const imgStyle = {
-    marginLeft:'5%'
+    marginLeft: '5%'
 };
 
 export default class Articles extends Component {
@@ -93,9 +93,10 @@ export default class Articles extends Component {
                     <ArticleDiv>
                         <ArticleContentDiv>
                             <ArticleTitle>What is Emergency Contraception?</ArticleTitle>
-                                <img style={imgStyle}
-                                    src="https://c-5uwzmx78pmca09x24quiomax2eiowziumlqix2ekwu.g00.everydayhealth.com/g00/3_c-5eee.mdmzgligpmitbp.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fquioma.iowziumlqi.kwux2fmdmzgligpmitbpx2fokuax2fEpib-Qa-Mumzomvkg-Kwvbzikmx78bqwv-ZU-500f284.rx78ox3fq98k.uizsx3dquiom_$/$/$/$"
-                                    width="600" height="400"/>
+                            <img style={imgStyle}
+                                 href = "https://www.everydayhealth.com/birth-control/emergency-contraception/"
+                                 src="https://c-5uwzmx78pmca09x24quiomax2eiowziumlqix2ekwu.g00.everydayhealth.com/g00/3_c-5eee.mdmzgligpmitbp.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fquioma.iowziumlqi.kwux2fmdmzgligpmitbpx2fokuax2fEpib-Qa-Mumzomvkg-Kwvbzikmx78bqwv-ZU-500f284.rx78ox3fq98k.uizsx3dquiom_$/$/$/$"
+                                 width="600" height="400"/>
                         </ArticleContentDiv>
                     </ArticleDiv>
                 </ArticleContainer>
