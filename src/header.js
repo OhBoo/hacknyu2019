@@ -24,12 +24,12 @@ export default class Header extends React.Component{
         anchorEl: null,
         open: false,
         };
-handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
+	handleClick = event => {
+	    this.setState({ anchorEl: event.currentTarget });
+	  };
+	handleClose = () => {
+	    this.setState({ anchorEl: null });
+	  };
 	render()
 	{
 		 const { anchorEl } = this.state;
@@ -65,13 +65,11 @@ handleClose = () => {
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
 										style = {{
 											maxWidth: '4%',
-
 											alt: "chicken",
 											maxWidth: '70%',
 											verticalAlign: 'middle',
 											marginTop: 15
 										}}
-
 										/>
 									</Link>
 								</center>
@@ -90,42 +88,40 @@ handleClose = () => {
           				onClick={this.handleClick}
         			>Menu
         			</Button>
-					<Menu
+					
+
+			        <Hidden xsDown>
+							<Grid item sm = {2}>
+								<Menu
 			          id="simple-menu"
 			          anchorEl={anchorEl}
 			          open={Boolean(anchorEl)}
 			          onClose={this.handleClose}
+			          style = {{
+			          	width: '50',
+			          	height: '50'
+			          }}
 			        >
-			          <MenuItem onClick={this.handleClose}>Articles</MenuItem>
-			          <MenuItem onClick={this.handleClose}>Resources</MenuItem>
-			          <MenuItem onClick={this.handleClose}>Forum</MenuItem>
+				        <MenuItem onClick={this.handleClose}>
+				          	<Link to = "./Articles">
+				          		Articles
+				          	</Link>
+				        </MenuItem>
+				        
+				        <MenuItem onClick={this.handleClose}>
+				          	<Link to = "./Resources">
+				          		Resources
+				          	</Link>
+				        </MenuItem>
+
+				        <MenuItem onClick={this.handleClose}>
+				        	<Link to = "./Forum">
+				          		Forum
+				          	</Link>
+				        </MenuItem>
 			        </Menu>
-
-						<Hidden smUp>
-							<Grid container spacing = {12}>
-
-								<Grid item xs={3}>
-									&nbsp;
-								</Grid>
-								<Grid item xs={6}>
-
-									<center>
-										<Link to  = "/">
-											<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
-
-
-											style = {{
-												maxWidth: '4%',
-												verticalAlign: 'middle',
-												marginTop: 15
-											}}
-											/>
-										</Link>
-									</center>
-								</Grid>
 							</Grid>
 						</Hidden>
-						
 				</Grid>
 			</div>
 		)

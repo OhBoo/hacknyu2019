@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Resources from './Resources';
 import Grid from '@material-ui/core/Grid';
-
-
 import Articles from './Articles';
 import Forum from './Forum';
 import Resources from './Resources';
@@ -26,14 +23,20 @@ export default class App extends Component {
         const Home = () => (
             <Container>
                 <Header/>
-                <LocationSearchInput/>
+                <div>
+                    <Grid container spacing={16} style={{height: 500, padding:40}} >
+                        <Grid item md zeroMinWidth>
+                            <LocationSearchInput/>
+                        </Grid>
+                    </Grid>
+                </div>
 
 
                 <ButtonDiv>
-                    <div style={{padding: 70}}>
-                        <Grid style={{height: 500}} container spacing={32} direction="row" align="center">
+                    <div>
+                        <Grid style={{height: 300}} container spacing={16} direction="row" align="center">
                             <Grid item md zeroMinWidth>
-                                <a href="http://localhost:3001/Articles">
+                                <a href="http://localhost:3000/Articles">
                                     <img
                                         src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
                                         width="360" height="180"/>
@@ -42,7 +45,7 @@ export default class App extends Component {
                             </Grid>
 
                             <Grid item md zeroMinWidth>
-                                <a href="http://localhost:3001/Resources">
+                                <a href="http://localhost:3000/Resources">
                                     <img
                                         src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
                                         width="360" height="180"/>
@@ -51,7 +54,7 @@ export default class App extends Component {
                             </Grid>
 
                             <Grid item md zeroMinWidth>
-                                <a href="http://localhost:3001/Forum">
+                                <a href="http://localhost:3000/Forum">
                                     <img
                                         src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
                                         width="360" height="180"/>
@@ -61,8 +64,6 @@ export default class App extends Component {
                         </Grid>
                     </div>
                 </ButtonDiv>
-
-
             </Container>
 
         );
@@ -73,7 +74,6 @@ export default class App extends Component {
                     <Route exact path='/Resources' component={Resources}/>
                     <Route exact path='/Articles' component={Articles}/>
                     <Route exact path='/Forum' component={Forum}/>
-                    <Route exact path='/Resources' component={Resources}/>
                 </div>
             </Router>
         );

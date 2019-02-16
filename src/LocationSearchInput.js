@@ -77,7 +77,7 @@ export class LocationSearchInput extends React.Component {
                         <div>
                             <SearchInput
                                 {...getInputProps({
-                                    placeholder: 'Take a Journey ...',
+                                    placeholder: 'Where are you ...',
                                     className: 'form-control mr-sm-2',
                                 })}
                             />

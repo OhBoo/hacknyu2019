@@ -77,11 +77,6 @@ export default class Articles extends Component {
         return (
             <div>
                 <Header/>
-
-
-                <h1>
-                    Articles
-                </h1>
                 <PageTitle>
                     Articles
                 </PageTitle>
@@ -94,8 +89,10 @@ export default class Articles extends Component {
                                 <iframe width="600" height="400" src="https://www.youtube.com/embed/oQbei5JGiT8"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen>
-                                </iframe>
+                                        allowFullScreen
+                                        style ={{
+                                            maxWidth: '95%'
+                                        }}/>
                             </ArticleVidDiv>
                         </ArticleContentDiv>
                     </ArticleDiv>
@@ -120,8 +117,9 @@ export default class Articles extends Component {
                         <ArticleContentDiv>
                             <ArticleTitle>What is Emergency Contraception?</ArticleTitle>
                             <a href = "https://www.everydayhealth.com/birth-control/emergency-contraception/" target="_blank">
-                            <img style={imgStyle}
-
+                            <img style ={{
+                                            maxWidth: '98%'
+                                        }}
                                  src="https://c-5uwzmx78pmca09x24quiomax2eiowziumlqix2ekwu.g00.everydayhealth.com/g00/3_c-5eee.mdmzgligpmitbp.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fquioma.iowziumlqi.kwux2fmdmzgligpmitbpx2fokuax2fEpib-Qa-Mumzomvkg-Kwvbzikmx78bqwv-ZU-500f284.rx78ox3fq98k.uizsx3dquiom_$/$/$/$"
                                  width="600" height="400"/>
                             </a>
