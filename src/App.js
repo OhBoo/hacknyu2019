@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
 import Resources from './Resources';
 import Articles from './Articles';
 import Forum from './Forum';
 import Header from './header';
 import Topbar from './topbar.js';
-import Home from './home.js';
 const Container = styled.div`
 
 `;
