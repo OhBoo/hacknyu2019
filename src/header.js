@@ -2,14 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
+
 
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+
 
 const style = {
 		backgroundColor: '',
@@ -57,14 +53,10 @@ class Header extends React.Component{
 									<center>
 										<Link to  = "/">
 											<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
-<<<<<<< HEAD
-                                                 alt = "chicken"
-												 style = {{
-												maxWidth: '3%',
-=======
+
+
 											style = {{
 												maxWidth: '4%',
->>>>>>> 1229e4a26800318ae1ce8427cab37d12d8f12d8b
 												verticalAlign: 'middle',
 												marginTop: 15
 											}}

@@ -7,12 +7,9 @@ import Grid from '@material-ui/core/Grid';
 import Articles from './Articles';
 import Forum from './Forum';
 import Header from './header';
-<<<<<<< HEAD
-import Topbar from './topbar.js';
-import LocationSearchInput from './LocationSearchInput';
-=======
 
->>>>>>> 1229e4a26800318ae1ce8427cab37d12d8f12d8b
+import LocationSearchInput from './LocationSearchInput';
+
 const Container = styled.div`
 
 
@@ -25,10 +22,8 @@ export default class App extends Component {
         const Home = () => (
             <Container>
                 <Header/>
-<<<<<<< HEAD
-                <Topbar/>
                 <LocationSearchInput/>
-=======
+
 
                 <div style={{padding:70}}>
                     <Grid style={{height:500}} container spacing={32} direction="row" align="center" >
@@ -54,7 +49,7 @@ export default class App extends Component {
                         </Grid>
                     </Grid>
                 </div> 
->>>>>>> 1229e4a26800318ae1ce8427cab37d12d8f12d8b
+
             </Container>
 
         );
