@@ -18,7 +18,6 @@ const ArticleVidDiv = styled.div`
     margin-bottom: 0;
     font-family: Ubuntu;
     font-weight: 500;
-    background-color:#eeeeee;
     margin-top: 0;
     padding-top: 1%;
     color: #001e3b;
@@ -77,11 +76,6 @@ export default class Articles extends Component {
         return (
             <div>
                 <Header/>
-
-
-                <h1>
-                    Articles
-                </h1>
                 <PageTitle>
                     Articles
                 </PageTitle>

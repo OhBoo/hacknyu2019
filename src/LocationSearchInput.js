@@ -9,6 +9,13 @@ import PlacesAutocomplete, {
 
 const SearchInput = styled.input`
   width: 400px !important;
+  height: 35px;
+  margin-bottom: 2%;
+  margin-left: 15%;
+`;
+const LocationContainer = styled.div`
+    margin-top: 3%;
+    margin-left:25%;
 `;
 
 const Results = styled.div`
@@ -66,7 +73,7 @@ export class LocationSearchInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <LocationContainer>
 
                 <PlacesAutocomplete
                     value={this.state.address}
@@ -78,7 +85,7 @@ export class LocationSearchInput extends React.Component {
                             <SearchInput
                                 {...getInputProps({
                                     placeholder: 'Take a Journey ...',
-                                    className: 'form-control mr-sm-2',
+                                    className: 'form-control mr-sm-4',
                                 })}
                             />
                             <Results className="autocomplete-dropdown-container">
@@ -129,7 +136,7 @@ export class LocationSearchInput extends React.Component {
                         </div>
                     </InfoWindow>
                 </CurrentLocation>
-            </div>
+            </LocationContainer>
         );
     }
 }

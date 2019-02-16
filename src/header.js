@@ -14,8 +14,6 @@ const style = {
 const colors = {
   white: '#fff',
   black: '#000',
-  cambridgeblue:'#96C2C1',
-  pastelgrey:'#C7C8C4',
 }
 
 export default class Header extends React.Component{
@@ -65,9 +63,7 @@ handleClose = () => {
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
 										style = {{
 											maxWidth: '4%',
-
 											alt: "chicken",
-											maxWidth: '70%',
 											verticalAlign: 'middle',
 											marginTop: 15
 										}}
