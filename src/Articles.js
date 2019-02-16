@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Header from './header';
-import TopBar from "./topbar";
+
 
 const PageTitle = styled.h1`
     margin-left: 3%;
@@ -77,7 +77,7 @@ export default class Articles extends Component {
         return (
             <div>
                 <Header/>
-                <TopBar/>
+
 
                 <h1>
                     Articles

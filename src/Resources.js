@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Header from "./header";
-import TopBar from "./topbar";
 import Teens from "./assets/teensnyc.jpg";
 import HMI from "./assets/hmi.jpg";
 import PP from "./assets/PP.jpg";
@@ -72,7 +71,6 @@ export default class Resources extends Component {
         return (
             <div>
                 <Header/>
-                <TopBar/>
                 <Title>
                     Resources
                 </Title>
