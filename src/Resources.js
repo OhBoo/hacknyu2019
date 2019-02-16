@@ -55,7 +55,7 @@ const ResourceCaption = styled.h2`
     text-align: center;
 `;
 const ImgStyle = styled.img`
-    margin-left: 8%;
+    margin-left: 5%;
     width:80%;
     height:60%; 
     overflow: hidden;

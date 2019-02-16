@@ -6,28 +6,41 @@ import Articles from './Articles';
 import Forum from './Forum';
 import Header from './header';
 import Topbar from './topbar.js';
-<<<<<<< HEAD
+
 import Home from './home.js';
 import Grid from '@material-ui/core/Grid';
 import {Parallax, Background} from 'react-parallax';
-=======
-const Container = styled.div`
->>>>>>> 97b6a5f89c6d78928e0efe3c39940a6244e0bfa7
+
 
 const Container = styled.div`	
 
 `;
 
-const Banner = styled.div`
-	background-image: url("https://images.unsplash.com/photo-1513625047154-f390b1b0df20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-`;
+const Banner = {
+	backgroundImage: 'url("https://images.unsplash.com/photo-1513625047154-f390b1b0df20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+    justifyContent: 'center',
+    textAlign: 'center',	
+};
 
-const Message = styled.div`
-	text-align: center;
-	font-color: white;
+const Message = {
+    verticalAlign: 'center',
+	textColor: '#fff',
+    display: 'block',
+};
+
+const PageTitle = styled.h1`
+    padding-left: 43%;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    font-family: Ubuntu;
+    font-weight: 500;
+    //background-color:#eeeeee;
+    margin-top: 50px;
+    padding-top: 1%;
+    color: #fff;
+    text-align: center;
 `;
 
 
@@ -44,16 +57,14 @@ export default class App extends Component {
                 <Topbar/>
                 
                 <Parallax>
-            	<Banner>
+            	<div id="Banner" style={Banner}>
             	<Grid container spacing = {12}>
-            		<Message>
-            		<h4>
-						Welcome
-						</h4>
-					</Message>
+            		<PageTitle>
+                        Welcome!
+                    </PageTitle>
 				</Grid>
 					<div style={{height: '500px'}}/>
-            	</Banner>
+            	</div>
             	</Parallax>
             	
             </Container>
