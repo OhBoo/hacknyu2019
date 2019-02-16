@@ -4,6 +4,15 @@ import Header from './header';
 import TopBar from "./topbar";
 
 const PageTitle = styled.h1`
+    margin-left: 3%;
+`;
+
+
+const ArticleImg = styled.img`
+
+`;
+const ArticleVidDiv = styled.div`
+    margin-left: 3%;
     padding-left: 2%;
     font-size: 2.5em;
     margin-bottom: 0;
@@ -52,9 +61,7 @@ const ArticleCaption = styled.h2`
     text-align: center;
     
 `;
-const ArticleVidDiv = styled.div`
-    margin-left: 5%;
-`;
+
 const imgStyle = {
     marginLeft: '5%'
 };
@@ -71,6 +78,10 @@ export default class Articles extends Component {
             <div>
                 <Header/>
                 <TopBar/>
+
+                <h1>
+                    Articles
+                </h1>
                 <PageTitle>
                     Articles
                 </PageTitle>
