@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Resources from './Resources';
 import Grid from '@material-ui/core/Grid';
 
 
