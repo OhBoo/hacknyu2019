@@ -30,7 +30,7 @@ font-size: 25px;
 const ResourceContainer = styled.div`
       display: flex;
     flex-direction: row;
-    background-color: #ffffff;
+    background-color: #EEEEEE;
 `;
 const ResourceDiv = styled.div`
     width: 50%;
@@ -74,7 +74,7 @@ export default class Resources extends Component {
                 <Header/>
                 <TopBar/>
                 <Title>
-                    Resources
+                    <u>Resources</u>
                 </Title>
                 <PageContainer>
                     <ResourceContainer>
