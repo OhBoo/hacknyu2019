@@ -4,8 +4,10 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Resources from './Resources';
 import Grid from '@material-ui/core/Grid';
 
+
 import Articles from './Articles';
 import Forum from './Forum';
+import Resources from './Resources';
 import Header from './header';
 
 import LocationSearchInput from './LocationSearchInput';
@@ -17,6 +19,7 @@ const Container = styled.div`
 const ButtonDiv = styled.div`
     margin-top:20%;
 `;
+
 
 export default class App extends Component {
     render() {
@@ -59,6 +62,7 @@ export default class App extends Component {
                     </div>
                 </ButtonDiv>
 
+
             </Container>
 
         );
@@ -69,9 +73,11 @@ export default class App extends Component {
                     <Route exact path='/Resources' component={Resources}/>
                     <Route exact path='/Articles' component={Articles}/>
                     <Route exact path='/Forum' component={Forum}/>
+                    <Route exact path='/Resources' component={Resources}/>
                 </div>
             </Router>
         );
+
     }
 }
 

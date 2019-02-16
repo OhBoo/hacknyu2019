@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-
 import Grid from '@material-ui/core/Grid';
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem';
@@ -35,6 +34,7 @@ handleClose = () => {
 	{
 		 const { anchorEl } = this.state;
 		return(
+
 			<div id = "pageTop" style = {style}>
 					<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
 						<Hidden xsDown>
@@ -65,6 +65,7 @@ handleClose = () => {
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
 										style = {{
 											maxWidth: '4%',
+
 											alt: "chicken",
 											maxWidth: '70%',
 											verticalAlign: 'middle',
@@ -75,7 +76,6 @@ handleClose = () => {
 									</Link>
 								</center>
 							</Grid>
-
 						</Grid>
 					</Hidden>
 
@@ -100,6 +100,7 @@ handleClose = () => {
 			          <MenuItem onClick={this.handleClose}>Resources</MenuItem>
 			          <MenuItem onClick={this.handleClose}>Forum</MenuItem>
 			        </Menu>
+
 						<Hidden smUp>
 							<Grid container spacing = {12}>
 
@@ -125,12 +126,9 @@ handleClose = () => {
 							</Grid>
 						</Hidden>
 						
-
 				</Grid>
 			</div>
 		)
 	}
 }
-
-
 
