@@ -48,20 +48,20 @@ class TopBar extends React.Component{
 
 			<div id = "topNav">
 					<Hidden xsDown>
-						<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1,display: "flex", textAlign: "center"}} >
+						<AppBar position="static" style = {{backgroundColor: 'white', flexGrow: 1,display: "flex", textAlign: "center"}} >
 							<Tabs>
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
-									    <Link to="/Articles" style= {{color: 'white',textDecoration:'none'}}>
+									    <Link to="/Articles" style= {{color: 'cambridgeblue',textDecoration:'none'}}>
 						            		<Tab label = "Articles" />
 						            	</Link>	
 
-									    <Link to="/Resources" style= {{color: 'white',textDecoration:'none'}}>
+									    <Link to="/Resources" style= {{color: 'cambridgeblue',textDecoration:'none'}}>
 						            		<Tab label = "Resources" />
 						            	</Link>
 
 
-						            	<Link to="/Forum" style= {{color: 'white',textDecoration:'none' }}>
+						            	<Link to="/Forum" style= {{color: 'cambridgeblue',textDecoration:'none' }}>
 						            		<Tab label = "Forum" />
 						            	</Link> 
 						            </Grid>

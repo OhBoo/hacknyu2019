@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Header from './header';
 import TopBar from "./topbar";
+import answer_forum_form from "./answer_forum_form";
 
 export default class Forum extends Component {
     constructor(props) {
@@ -27,39 +28,7 @@ export default class Forum extends Component {
                 
             </div>
 
-<html>
-<head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  background-color: #96C2C1;
-  padding: 5px;
-}
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px dotted rgba(144, 143, 139, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: left;
-}
-</style>
-</head>
-<body>
-
-<h1>The display Property:</h1>
-
-<div class="grid-container">
-  <div class="grid-item">Post 1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>  
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>  
-</div>
-</body>
-</html>
 
         );
     }
