@@ -29,8 +29,6 @@ const ArticleVidDiv = styled.div`
     background-color:#eeeeee;
     margin-top: 0;
     padding-top: 1%;
-    
-    
     color: #001e3b;
 `;
 const ArticleTitle = styled.h2`
@@ -55,7 +53,6 @@ const ArticleCaptionDiv = styled.div`
     background-color: #3eb1cb;
  
   
-    border-width: 1px
 `;
 const ArticleContentDiv = styled.div`
     
