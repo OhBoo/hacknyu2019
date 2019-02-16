@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Relationships from './Relationships';
+import Resources from './Resources';
 import LGBT from './LGBT';
-import ClinicsNearby from './ClinicsNearby';
-import SexHealthResources from './SexHealthResources';
+import Articles from './Articles';
+import Forum from './Forum';
 const Container = styled.div`
 
 `;
@@ -32,10 +32,10 @@ export default class App extends Component {
             <Router>
                 <div>
                     <Route exact path='' component={Home}/>
-                    <Route exact path='/ClinicsNearby' component ={ClinicsNearby}/>
+                    <Route exact path='/ClinicsNearby' component ={Articles}/>
                     <Route exact path='/LGBT' component={LGBT}/>
-                    <Route exact path='/SexHealthResources' component={SexHealthResources}/>
-                    <Route exact path='/Relationships' component={Relationships}/>
+                    <Route exact path='/SexHealthResources' component={Forum}/>
+                    <Route exact path='/Relationships' component={Resources}/>
                 </div>
             </Router>
 

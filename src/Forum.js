@@ -3,15 +3,19 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
-export default class ClinicsNearby extends Component {
+export default class Forum extends Component {
+    constructor(props) {
+        super(props);
+
+    }
 
     render() {
         return (
             <div>
                 <h1>
-                    Clinics nearby
+                    SEXY TIMEEE
                 </h1>
             </div>
-        )
+        );
     }
 }
