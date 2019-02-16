@@ -16,7 +16,7 @@ export default class Forum extends Component {
                 <Header/>
                 <TopBar/>
                 <h1>
-                    SEXY FORUM TIMEEE
+                    Under Construction
                 </h1>
             </div>
         );
