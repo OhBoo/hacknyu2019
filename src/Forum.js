@@ -20,9 +20,6 @@ export default class Forum extends Component {
                     Forum
                 </h1>
 
-                <h2>
-                    Question and answer
-                </h2>
                 <form>
                     Username:<br/>
                     <input type="text" name="username"/> <br/>
