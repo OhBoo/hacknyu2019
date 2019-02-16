@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Relationships from './Relationships';
-import LGBT from './LGBT';
-import ClinicsNearby from './ClinicsNearby';
-import SexHealthResources from './SexHealthResources';
+import Resources from './Resources';
+import Articles from './Articles';
+import Forum from './Forum';
+import Header from './header';
+import Topbar from './topbar.js';
+import Home from './home.js';
 const Container = styled.div`
 
 `;
@@ -19,12 +21,8 @@ export default class App extends Component {
     render() {
         const Home = () => (
             <Container>
-                <h1>
-                    TENDR
-                </h1>
-                <BoxContainer>
-
-                </BoxContainer>
+                <Header/>
+                <Topbar/>
             </Container>
 
         );
@@ -32,10 +30,9 @@ export default class App extends Component {
             <Router>
                 <div>
                     <Route exact path='' component={Home}/>
-                    <Route exact path='/ClinicsNearby' component ={ClinicsNearby}/>
-                    <Route exact path='/LGBT' component={LGBT}/>
-                    <Route exact path='/SexHealthResources' component={SexHealthResources}/>
-                    <Route exact path='/Relationships' component={Relationships}/>
+                    <Route exact path='/Resources' component ={Resources}/>
+                    <Route exact path='/Articles' component={Articles}/>
+                    <Route exact path='/Forum' component={Forum}/>
                 </div>
             </Router>
 

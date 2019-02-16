@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
-export default class ClinicsNearby extends Component {
+export default class Articles extends Component {
 
     render() {
         return (
             <div>
                 <h1>
-                    Clinics nearby
+                    Articles
                 </h1>
             </div>
         )

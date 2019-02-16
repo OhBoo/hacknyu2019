@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
-export default class LGBT extends Component {
+export default class Forum extends Component {
     constructor(props) {
         super(props);
 
@@ -13,7 +13,7 @@ export default class LGBT extends Component {
         return (
             <div>
                 <h1>
-                    LGBT
+                    SEXY FORUM TIMEEE
                 </h1>
             </div>
         );
