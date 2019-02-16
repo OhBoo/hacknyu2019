@@ -1,28 +1,46 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import styled from 'styled-components';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Relationships from './Relationships';
+import LGBT from './LGBT';
+import ClinicsNearby from './ClinicsNearby';
+import SexHealthResources from './SexHealthResources';
+const Container = styled.div`
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+`;
+const BoxContainer = styled.div`
+`
+
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+
+    }
+    render() {
+        const Home = () => (
+            <Container>
+                <h1>
+                    TENDR
+                </h1>
+                <BoxContainer>
+
+                </BoxContainer>
+            </Container>
+
+        );
+        return (
+            <Router>
+                <div>
+                    <Route exact path='' component={Home}/>
+                    <Route exact path='/ClinicsNearby' component ={ClinicsNearby}/>
+                    <Route exact path='/LGBT' component={LGBT}/>
+                    <Route exact path='/SexHealthResources' component={SexHealthResources}/>
+                    <Route exact path='/Relationships' component={Relationships}/>
+                </div>
+            </Router>
+
+
+        );
+    }
 }
 
-export default App;
