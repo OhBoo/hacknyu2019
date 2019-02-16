@@ -40,13 +40,13 @@ export class LocationSearchInput extends Component {
         return (
             <LocationContainer>
                 <CurrentLocation
-
+                    centerAroundCurrentLocation
                     google={this.props.google}
                     zoom={14}
                     style={mapStyles}
                     initialCenter={ {
-                        lng: 43.6532,
-                        lat: -79.3832,
+                        lat: 43.6532,
+                        lng: -79.3832,
                     }}
                 >
                     <Marker
