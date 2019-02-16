@@ -29,7 +29,7 @@ class Header extends React.Component{
 					<Grid container spacing={8}>
 
 						<Hidden xsDown>
-							<Grid item sm = {2} style = {{display: 'flex'}} >
+							<Grid item sm = {1} style = {{display: 'flex'}} >
 								<center >
 									<Link to  = "/">
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6" 
@@ -69,8 +69,8 @@ class Header extends React.Component{
 						</Hidden>
 
 						<Grid item sm = {7}>
-							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Neue Haas Grotesk W01 Disp,Arial,sans-serif', fontWeight: 'bold', marginTop: 40}}>
-								<center>
+							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Neue Haas Grotesk W01 Disp,Arial,sans-serif', fontWeight: 'bold', marginTop: 70}}>
+								<center style={{fontSize: 150}}>
 									Tendr
 								</center>
 							</Typography>
