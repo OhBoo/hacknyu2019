@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
 import Resources from './Resources';
 import Articles from './Articles';
 import Forum from './Forum';
 import Header from './header';
 import Topbar from './topbar.js';
+<<<<<<< HEAD
 import Home from './home.js';
 import Grid from '@material-ui/core/Grid';
 import {Parallax, Background} from 'react-parallax';
+=======
+const Container = styled.div`
+>>>>>>> 97b6a5f89c6d78928e0efe3c39940a6244e0bfa7
 
 const Container = styled.div`	
 

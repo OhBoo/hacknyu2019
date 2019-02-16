@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -26,7 +27,7 @@ class Header extends React.Component{
 							<Grid item sm = {2} style = {{display: 'flex'}} >
 								<center >
 									<Link to  = "/">
-										<img src = "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1002614_496276807149247_1139499627_n.jpg?_nc_cat=0&oh=8877a9b5cee02e567f64299bb95c3418&oe=5C06F471" 
+										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6" 
 										style = {{
 											maxWidth: '70%',
 											verticalAlign: 'middle',
