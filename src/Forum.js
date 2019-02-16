@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import Header from './header';
 
 export default class Forum extends Component {
@@ -14,8 +13,9 @@ export default class Forum extends Component {
 
                     Under Construction
                 </h1>
-            </div>
 
+
+            </div>
 
 
         );
