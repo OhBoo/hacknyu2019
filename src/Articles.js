@@ -82,13 +82,6 @@ export default class Articles extends Component {
                 <h1>
                     Articles
                 </h1>
-                <ArticleTitle>Tea Consent</ArticleTitle>
-                <ArticleVidDiv>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/oQbei5JGiT8" frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                </iframe>
-                </ArticleVidDiv>
                 <PageTitle>
                     Articles
                 </PageTitle>

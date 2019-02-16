@@ -43,26 +43,66 @@ class TopBar extends React.Component{
 	render()
 	{
 		const { anchorEl } = this.state;
-		const { open } = this.state;
+
 		return(
 
 			<div id = "topNav">
+<<<<<<< HEAD
+				<Hidden xsDown>
+					<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1,display: "flex", textAlign: "center"}} >
+						<Tabs>
+							<Grid container spacing={48}>
+								<Grid item xs={12}>
+								    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
+					            		<Tab label = "Articles" />
+					            	</Link>	
+
+								    <Link to="/Resources" style= {{color: 'white',fontFamily: 'Ubuntu', fontweight:'500', textDecoration:'none'}}>
+					            		<Tab label = "Resources" />
+					            	</Link>
+
+
+					            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
+					            		<Tab label = "Forum" />
+					            	</Link> 
+					            </Grid>
+							
+							</Grid>
+						</Tabs>
+					</AppBar>
+				</Hidden>	            		
+
+				<Hidden smUp>
+					<AppBar position="static" style = {{backgroundColor: 'black', marginBottom: 20, marginTop: 25, flexGrow: 1,display: "flex"}} >
+						<IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
+             			 	<MenuIcon />
+          			  	</IconButton>
+          			
+				       <Menu
+				          id="simple-menu"
+				          anchorEl={anchorEl}
+				          open={Boolean(anchorEl)}
+				          onClose={this.handleClose}
+				        >
+						         
+=======
 					<Hidden xsDown>
-						<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1,display: "flex", textAlign: "center"}} >
+						<AppBar position="static" style = {{backgroundColor: 'white', flexGrow: 1,display: "flex", textAlign: "center"}} >
 							<Tabs>
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
 									    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
-						            		<Tab label = "Articles" />
+						            		<Tab label = "Articles" value={0} />
 						            	</Link>	
 
 									    <Link to="/Resources" style= {{color: 'white',fontFamily: 'Ubuntu', fontweight:'500', textDecoration:'none'}}>
-						            		<Tab label = "Resources" />
+						            		<Tab label = "Resources" value={0} />
 						            	</Link>
 
 
 						            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
-						            		<Tab label = "Forum" />
+						            		<Tab label = "Forum" value={0} />
+
 						            	</Link> 
 						            </Grid>
 								
@@ -85,6 +125,7 @@ class TopBar extends React.Component{
 							        >
 
 							         
+>>>>>>> bca8b29a8f968b891f38cdab3fb6e38da5f15849
 							<MenuItem onClick={this.handleClose}>
 							    <Link to="/Relationships" style= {{color: 'black',textDecoration:'none'}}>
 						           	<Tab label = "Relationships" />
@@ -109,12 +150,10 @@ class TopBar extends React.Component{
 						       	</Link> 
 							</MenuItem>
 						</Menu>
-						</AppBar>
-					</Hidden>
-				</div>	
-
-
-			)
+					</AppBar>
+				</Hidden>
+			</div>	
+		)
 	}
 }
 
