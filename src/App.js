@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Resources from './Resources';
-import LGBT from './LGBT';
 import Articles from './Articles';
 import Forum from './Forum';
 const Container = styled.div`
