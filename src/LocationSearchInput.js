@@ -106,13 +106,14 @@ export class LocationSearchInput extends React.Component {
                         </div>
                     )}
                 </PlacesAutocomplete>
-                <Map
+                <CurrentLocation
+                    centerAroundCurrentLocation
                     google={this.props.google}
                     zoom={14}
                     style={mapStyles}
                     initialCenter={{
-                        lat: -1.2884,
-                        lng: 36.8233
+                        lat: 43.6532,
+                        lng: -79.3832,
                     }}
                 >
 
@@ -124,10 +125,10 @@ export class LocationSearchInput extends React.Component {
                         onClose={this.onClose}>
 
                         <div>
-                            <h1>Todorokiii</h1>
+                            <h4>HI</h4>
                         </div>
                     </InfoWindow>
-                </Map>
+                </CurrentLocation>
             </div>
         );
     }
