@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
+
 import Typography from '@material-ui/core/Typography';
+
+import Grid from '@material-ui/core/Grid';
+
 
 const style = {
 		backgroundColor: '',
@@ -28,14 +25,14 @@ class Header extends React.Component{
 		return(
 
 			<div id = "pageTop" style = {style}>	
-					<Grid container spacing={8}>
+					<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
 
 						<Hidden xsDown>
 							<Grid item sm = {2} style = {{display: 'flex'}} >
-								<center >
 									<Link to  = "/">
 										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6" 
-										style = {{
+											alt = "chicken"
+											 style = {{
 											maxWidth: '70%',
 											verticalAlign: 'middle',
 											justifyContent: 'center',
@@ -45,11 +42,11 @@ class Header extends React.Component{
 										}}
 										/>
 									</Link>
-								</center>
 							</Grid>
 						</Hidden>
 						<Hidden smUp>
 							<Grid container spacing = {12}>
+
 								<Grid item xs={3}>
 									&nbsp;
 								</Grid>
@@ -57,9 +54,11 @@ class Header extends React.Component{
 
 									<center>
 										<Link to  = "/">
-											<img src = "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1002614_496276807149247_1139499627_n.jpg?_nc_cat=0&oh=8877a9b5cee02e567f64299bb95c3418&oe=5C06F471" 
+											<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
+
+
 											style = {{
-												maxWidth: '70%',
+												maxWidth: '4%',
 												verticalAlign: 'middle',
 												marginTop: 15
 											}}
@@ -70,11 +69,9 @@ class Header extends React.Component{
 							</Grid>
 						</Hidden>
 
-						<Grid item sm = {7}>
-							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Neue Haas Grotesk W01 Disp,Arial,sans-serif', fontWeight: 'bold', marginTop: 40}}>
-								<center>
+						<Grid item sm = {6}>
+							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
 									Tendr
-								</center>
 							</Typography>
 						</Grid>
 				</Grid>
@@ -82,9 +79,6 @@ class Header extends React.Component{
 		)
 	}
 }
-
-
-
 
 export default Header;
 
