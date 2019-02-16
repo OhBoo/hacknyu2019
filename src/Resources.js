@@ -2,15 +2,20 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
+const Title = styled.h1`
+font-size: 50px;    
 
-export default class Relationships extends Component {
+`;
+
+
+export default class Resources extends Component {
 
     render() {
         return (
             <div>
-                <h1>
-                    Relationships
-                </h1>
+                <Title>
+                    Look at all these resources
+                </Title>
             </div>
         )
     }
