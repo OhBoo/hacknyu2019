@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Header from './header';
 import TopBar from "./topbar";
+import answer_forum_form from "./answer_forum_form";
 
 export default class Forum extends Component {
 
@@ -12,9 +13,13 @@ export default class Forum extends Component {
                 <Header/>
                 <TopBar/>
                 <h1>
+
                     Under Construction
-                </h1>
-            </div>
+</h1>
+
+
+
+
         );
     }
 }
