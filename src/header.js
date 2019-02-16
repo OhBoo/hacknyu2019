@@ -51,43 +51,43 @@ export default class Header extends React.Component{
 										marginBottom:'auto'
 									}}
 									/>
-									</Link>
-									</Grid>
-									</Hidden>
-
-
-					<Hidden smUp>
-						<Grid container spacing = {12}>
-							<Grid item xs={6}>
-
-								<center>
-									<Link to  = "/">
-										<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
-										style = {{
-											maxWidth: '4%',
-											alt: "chicken",
-											maxWidth: '70%',
-											verticalAlign: 'middle',
-											marginTop: 15
-										}}
-										/>
-									</Link>
-								</center>
+								</Link>
 							</Grid>
-						</Grid>
-					</Hidden>
+						</Hidden>
 
-					<Grid item sm = {6}>
-						<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
-							Tendr
-						</Typography>
-					</Grid> 
-					<Button
-          				aria-owns={anchorEl ? 'simple-menu' : undefined}
-          				aria-haspopup="true"
-          				onClick={this.handleClick}
-        			>Menu
-        			</Button>
+
+						<Hidden smUp>
+							<Grid container spacing = {12}>
+								<Grid item xs={6}>
+									<center>
+										<Link to  = "/">
+											<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
+											style = {{
+												maxWidth: '4%',
+												alt: "chicken",
+												maxWidth: '70%',
+												verticalAlign: 'middle',
+												marginTop: 15
+											}}
+											/>
+										</Link>
+									</center>
+								</Grid>
+							</Grid>
+						</Hidden>
+
+						<Grid item sm = {6}>
+							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
+								Tendr
+							</Typography>
+						</Grid> 
+					
+						<Button
+	          				aria-owns={anchorEl ? 'simple-menu' : undefined}
+	          				aria-haspopup="true"
+	          				onClick={this.handleClick}
+	        				>Menu
+	        			</Button>
 					
 
 			        <Hidden xsDown>
