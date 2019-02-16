@@ -48,7 +48,7 @@ class TopBar extends React.Component{
 
 			<div id = "topNav">
 					<Hidden xsDown>
-						<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1,display: "flex", textAlign: "center"}} >
+						<AppBar position="static" style = {{backgroundColor: 'white', flexGrow: 1,display: "flex", textAlign: "center"}} >
 							<Tabs>
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
@@ -63,6 +63,7 @@ class TopBar extends React.Component{
 
 						            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
 						            		<Tab label = "Forum" value={0} />
+
 						            	</Link> 
 						            </Grid>
 								

@@ -14,6 +14,8 @@ const style = {
 const colors = {
   white: '#fff',
   black: '#000',
+  cambridgeblue:'#96C2C1',
+  pastelgrey:'#C7C8C4',
 }
 
 class Header extends React.Component{
