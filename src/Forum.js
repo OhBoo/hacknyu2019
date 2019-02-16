@@ -13,7 +13,7 @@ export default class Forum extends Component {
         return (
             <div>
                 <h1>
-                    SEXY TIMEEE
+                    SEXY FORUM TIMEEE
                 </h1>
             </div>
         );

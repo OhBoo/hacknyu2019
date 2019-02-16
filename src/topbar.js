@@ -3,20 +3,12 @@ import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import withWidth, {isWidthUp} from '@material-ui/core/withWidth';
 import Hidden from '@material-ui/core/Hidden';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import MenuList from '@material-ui/core/MenuList';
-import Popper from '@material-ui/core/Popper';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import PropTypes from 'prop-types';
 
 
 class TopBar extends React.Component{
@@ -60,20 +52,17 @@ class TopBar extends React.Component{
 							<Tabs>
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
-									    <Link to="/Relationships" style= {{color: 'white',textDecoration:'none'}}>
-						            		<Tab label = "Relationships" />
+									    <Link to="/Articles" style= {{color: 'white',textDecoration:'none'}}>
+						            		<Tab label = "Articles" />
 						            	</Link>	
 
-									    <Link to="/SexHealthResources" style= {{color: 'white',textDecoration:'none'}}>
-						            		<Tab label = "Sex Health Resources" />
-						            	</Link>
-						            
-						            	<Link to="/LGBT" style= {{color: 'white',textDecoration:'none' }}>
-						            		<Tab label = "LGBT" />
+									    <Link to="/Resources" style= {{color: 'white',textDecoration:'none'}}>
+						            		<Tab label = "Resources" />
 						            	</Link>
 
-						            	<Link to="/ClinicsNearby" style= {{color: 'white',textDecoration:'none' }}>
-						            		<Tab label = "Clinics Nearby" />
+
+						            	<Link to="/Forum" style= {{color: 'white',textDecoration:'none' }}>
+						            		<Tab label = "Forum" />
 						            	</Link> 
 						            </Grid>
 								

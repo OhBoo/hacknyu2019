@@ -14,7 +14,7 @@ export default class Resources extends Component {
         return (
             <div>
                 <Title>
-                    Relationships are cool
+                    Look at all these resources
                 </Title>
             </div>
         )

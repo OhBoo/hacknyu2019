@@ -9,7 +9,7 @@ export default class Articles extends Component {
         return (
             <div>
                 <h1>
-                    Clinics nearby
+                    Articles
                 </h1>
             </div>
         )
