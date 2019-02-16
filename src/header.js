@@ -51,7 +51,7 @@ class Header extends React.Component{
 										<Link to  = "/">
 											<img src = "https://us.123rf.com/450wm/matsiash/matsiash1507/matsiash150700007/42761668-stock-vector-sign-stylized-silhouette-chicken-logo-design-template.jpg?ver=6"
 											style = {{
-												maxWidth: '3%',
+												maxWidth: '4%',
 												verticalAlign: 'middle',
 												marginTop: 15
 											}}
@@ -62,8 +62,8 @@ class Header extends React.Component{
 							</Grid>
 						</Hidden>
 
-						<Grid item sm = {7}>
-							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '4%'}}>
+						<Grid item sm = {6}>
+							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
 									Tendr
 							</Typography>
 						</Grid>
