@@ -55,8 +55,6 @@ export default class App extends Component {
                         </Grid>
                     </div>
                 </ButtonDiv>
-
-
             </Container>
 
         );
@@ -67,7 +65,6 @@ export default class App extends Component {
                     <Route exact path='/Resources' component={Resources}/>
                     <Route exact path='/Articles' component={Articles}/>
                     <Route exact path='/Forum' component={Forum}/>
-                    <Route exact path='/Resources' component={Resources}/>
                 </div>
             </Router>
         );
