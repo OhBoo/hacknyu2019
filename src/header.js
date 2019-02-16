@@ -1,19 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-=======
 
->>>>>>> 3cfb19eb30fe40ad936373472b22f3af18ce924a
-=======
-
->>>>>>> master
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -84,9 +78,6 @@ class Header extends React.Component{
 		)
 	}
 }
-
-
-
 
 export default Header;
 

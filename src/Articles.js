@@ -4,24 +4,16 @@ import Header from './header';
 import TopBar from "./topbar";
 
 const PageTitle = styled.h1`
-<<<<<<< HEAD
-    margin-left: 3%;
-<<<<<<< HEAD
-`;
-const ArticleTitle = styled.h2`
     margin-left: 3%;
 `;
+
 
 const ArticleImg = styled.img`
 
 `;
 const ArticleVidDiv = styled.div`
     margin-left: 3%;
-`;
-=======
-=======
     padding-left: 2%;
->>>>>>> master
     font-size: 2.5em;
     margin-bottom: 0;
     font-family: Ubuntu;
@@ -69,21 +61,15 @@ const ArticleCaption = styled.h2`
     text-align: center;
     
 `;
-const ArticleVidDiv = styled.div`
-    margin-left: 5%;
-`;
+
 const imgStyle = {
     marginLeft: '5%'
 };
-<<<<<<< HEAD
->>>>>>> 3cfb19eb30fe40ad936373472b22f3af18ce924a
-=======
 const PageContainer = styled.div`
 background-color: #eeeeee;
 padding: 1%;
 padding-bottom: 5%;
 `;
->>>>>>> master
 
 export default class Articles extends Component {
 
@@ -92,8 +78,7 @@ export default class Articles extends Component {
             <div>
                 <Header/>
                 <TopBar/>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 <h1>
                     Articles
                 </h1>
@@ -104,9 +89,6 @@ export default class Articles extends Component {
                         allowFullScreen>
                 </iframe>
                 </ArticleVidDiv>
-=======
-=======
->>>>>>> master
                 <PageTitle>
                     Articles
                 </PageTitle>
@@ -153,12 +135,7 @@ export default class Articles extends Component {
                         </ArticleContentDiv>
                     </ArticleDiv>
                 </ArticleContainer>
-<<<<<<< HEAD
->>>>>>> 3cfb19eb30fe40ad936373472b22f3af18ce924a
-
-=======
                 </PageContainer>
->>>>>>> master
             </div>
         )
     }
