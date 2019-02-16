@@ -9,6 +9,13 @@ import PlacesAutocomplete, {
 
 const SearchInput = styled.input`
   width: 400px !important;
+  height: 35px;
+  margin-bottom: 2%;
+  margin-left: 15%;
+`;
+const LocationContainer = styled.div`
+    margin-top: 3%;
+    margin-left:25%;
 `;
 
 const Results = styled.div`
@@ -48,7 +55,10 @@ export class LocationSearchInput extends React.Component {
         super(props);
         this.state = {address: ''};
     }
+    getnewLocation = (lat, lon) => {
 
+
+    }
     handleChange = address => {
         this.setState({address});
     };
@@ -58,7 +68,7 @@ export class LocationSearchInput extends React.Component {
             .then(results => getLatLng(results[0]))
             .then(latLng => {
                 console.log('Success', latLng);
-                this.props.getWeatherData(latLng.lat, latLng.lng);
+                this.getnewLocation(latLng.lat, latLng.lng);
                 this.setState({address: ''});
             })
             .catch(error => console.error('Error', error));
@@ -66,7 +76,7 @@ export class LocationSearchInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <LocationContainer>
 
                 <PlacesAutocomplete
                     value={this.state.address}
@@ -78,7 +88,7 @@ export class LocationSearchInput extends React.Component {
                             <SearchInput
                                 {...getInputProps({
                                     placeholder: 'Take a Journey ...',
-                                    className: 'form-control mr-sm-2',
+                                    className: 'form-control mr-sm-4',
                                 })}
                             />
                             <Results className="autocomplete-dropdown-container">
@@ -106,14 +116,11 @@ export class LocationSearchInput extends React.Component {
                         </div>
                     )}
                 </PlacesAutocomplete>
-                <Map
+                <CurrentLocation
+                    centerAroundCurrentLocation
                     google={this.props.google}
                     zoom={14}
                     style={mapStyles}
-                    initialCenter={{
-                        lat: -1.2884,
-                        lng: 36.8233
-                    }}
                 >
 
                     <Marker onClick={this.onMarkerClick}
@@ -124,11 +131,11 @@ export class LocationSearchInput extends React.Component {
                         onClose={this.onClose}>
 
                         <div>
-                            <h1>Todorokiii</h1>
+                            <h4>HI</h4>
                         </div>
                     </InfoWindow>
-                </Map>
-            </div>
+                </CurrentLocation>
+            </LocationContainer>
         );
     }
 }

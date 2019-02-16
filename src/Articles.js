@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Header from './header';
-import TopBar from "./topbar";
+
 
 const PageTitle = styled.h1`
     margin-left: 3%;
@@ -18,7 +18,6 @@ const ArticleVidDiv = styled.div`
     margin-bottom: 0;
     font-family: Ubuntu;
     font-weight: 500;
-    background-color:#eeeeee;
     margin-top: 0;
     padding-top: 1%;
     color: #001e3b;
@@ -77,18 +76,6 @@ export default class Articles extends Component {
         return (
             <div>
                 <Header/>
-                <TopBar/>
-
-                <h1>
-                    Articles
-                </h1>
-                <ArticleTitle>Tea Consent</ArticleTitle>
-                <ArticleVidDiv>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/oQbei5JGiT8" frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                </iframe>
-                </ArticleVidDiv>
                 <PageTitle>
                     Articles
                 </PageTitle>
