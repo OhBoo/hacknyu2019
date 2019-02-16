@@ -52,16 +52,16 @@ class TopBar extends React.Component{
 							<Tabs>
 								<Grid container spacing={48}>
 									<Grid item xs={12}>
-									    <Link to="/Articles" style= {{color: 'white',textDecoration:'none'}}>
+									    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
 						            		<Tab label = "Articles" />
 						            	</Link>	
 
-									    <Link to="/Resources" style= {{color: 'white',textDecoration:'none'}}>
+									    <Link to="/Resources" style= {{color: 'white',fontFamily: 'Ubuntu', fontweight:'500', textDecoration:'none'}}>
 						            		<Tab label = "Resources" />
 						            	</Link>
 
 
-						            	<Link to="/Forum" style= {{color: 'white',textDecoration:'none' }}>
+						            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
 						            		<Tab label = "Forum" />
 						            	</Link> 
 						            </Grid>
