@@ -23,6 +23,14 @@ export default class Forum extends Component {
                 <h2>
                     Question and answer
                 </h2>
+                <form>
+                    Username:<br/>
+                    <input type="text" name="username"/> <br/>
+                    Question:<br/>
+                    <input type="text" name="question"/> <br/>
+                    <input type="submit" value = "submit"/> <br/>
+                </form>
+
                 <p> To be posted...</p>
                 <img src="http://www.quickmeme.com/img/1c/1c491f71b689e82d6e838b5d8ce5cbdfef41723662d1ce5e5cf34f32ae60a7a3.jpg"/>
                 
