@@ -57,7 +57,11 @@ export default class Articles extends Component {
             <div>
                 <Header/>
                 <TopBar/>
+<<<<<<< 3cfb19eb30fe40ad936373472b22f3af18ce924a
                 <PageTitle>
+=======
+                <h1>
+>>>>>>> lolz
                     Articles
                 </PageTitle>
                 <ArticleContainer>
