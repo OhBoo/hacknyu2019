@@ -128,3 +128,8 @@ handleClose = () => {
 	}
 }
 
+
+
+
+export default Header;
+

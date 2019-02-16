@@ -9,7 +9,6 @@ const PageTitle = styled.h1`
 
 
 const ArticleImg = styled.img`
-
 `;
 const ArticleVidDiv = styled.div`
     margin-left: 3%;
@@ -32,7 +31,6 @@ const ArticleContainer = styled.div`
     display: flex;
     flex-direction: row;
     background-color: #ffffff;
-
 `;
 const ArticleDiv = styled.div`
     width: 50%;
@@ -42,11 +40,11 @@ const ArticleCaptionDiv = styled.div`
     width: 100%;
     height: 100%;
     background-color: #3eb1cb;
- 
-  
+
+
 `;
 const ArticleContentDiv = styled.div`
-    
+
     padding-top 1%;
     padding-bottom: 3%;
 `;
@@ -58,7 +56,7 @@ const ArticleCaption = styled.h2`
     font-weight: 300;
     font-size: 2em;
     text-align: center;
-    
+
 `;
 
 const imgStyle = {
