@@ -5,7 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+
+import TopBar from './topbar.js';
 
 const style = {
 		backgroundColor: '',
@@ -20,22 +22,13 @@ const colors = {
 
 export default class Header extends React.Component{
 
-	state = {
-        anchorEl: null,
-        open: false,
-        };
-	handleClick = event => {
-	    this.setState({ anchorEl: event.currentTarget });
-	  };
-	handleClose = () => {
-	    this.setState({ anchorEl: null });
-	  };
 	render()
 	{
 		 const { anchorEl } = this.state;
 		return(
 
 			<div id = "pageTop" style = {style}>
+				<TopBar/>
 					<Grid container spacing={8} style={{backgroundColor:'#3eb1cb'}}>
 						<Hidden xsDown>
 							<Grid item sm = {2} style = {{backgroundColor:'#3eb1cb'}}>
@@ -80,48 +73,7 @@ export default class Header extends React.Component{
 							<Typography component = 'h1' variant = 'display1' style = {{color: 'black', fontFamily: 'Ubuntu ', fontWeight: '700', fontSize: '4.5em', marginTop: '5%'}}>
 								Tendr
 							</Typography>
-						</Grid> 
-					
-						<Button
-	          				aria-owns={anchorEl ? 'simple-menu' : undefined}
-	          				aria-haspopup="true"
-	          				onClick={this.handleClick}
-	        				>Menu
-	        			</Button>
-					
-
-			        <Hidden xsDown>
-							<Grid item sm = {2}>
-								<Menu
-			          id="simple-menu"
-			          anchorEl={anchorEl}
-			          open={Boolean(anchorEl)}
-			          onClose={this.handleClose}
-			          style = {{
-			          	width: '50',
-			          	height: '50'
-			          }}
-			        >
-				        <MenuItem onClick={this.handleClose}>
-				          	<Link to = "./Articles">
-				          		Articles
-				          	</Link>
-				        </MenuItem>
-				        
-				        <MenuItem onClick={this.handleClose}>
-				          	<Link to = "./Resources">
-				          		Resources
-				          	</Link>
-				        </MenuItem>
-
-				        <MenuItem onClick={this.handleClose}>
-				        	<Link to = "./Forum">
-				          		Forum
-				          	</Link>
-				        </MenuItem>
-			        </Menu>
-							</Grid>
-						</Hidden>
+						</Grid>
 				</Grid>
 			</div>
 		)
