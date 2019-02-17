@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom';
 
 const mapStyles = {
@@ -119,7 +118,7 @@ CurrentLocation.defaultProps = {
     zoom: 14,
     initialCenter: {
         lng: 43.6532,
-        lat: 79.3832,
+        lat: -79.3832,
     },
     centerAroundCurrentLocation: false,
     visible: true
