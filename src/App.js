@@ -66,6 +66,7 @@ export default class App extends Component {
                     <Route exact path='/Resources' component={Resources}/>
                     <Route exact path='/Articles' component={Articles}/>
                     <Route exact path='/Forum' component={Forum}/>
+
                 </div>
             </Router>
         );

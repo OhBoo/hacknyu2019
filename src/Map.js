@@ -1,10 +1,14 @@
 import React from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import ReactDOM from 'react-dom';
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
 } from 'react-places-autocomplete';
+import {Marker} from "google-maps-react";
+
+
 
 const mapStyles = {
     map: {
@@ -45,14 +49,22 @@ export class CurrentLocation extends React.Component {
             .then(results => getLatLng(results[0]))
             .then(latLng => {
                 console.log('Success', latLng);
+                this.getSearchData(latLng.lat,latLng.lng);
                 this.setState({
                     currentLocation: {
                         lat: latLng.lat,
                         lng: latLng.lng
                     }
                 });
+
+
+
+                // this.state.searchData.forEach(function(element) {
+                //     console.log(element);
+                // });
             })
             .catch(error => console.error('Error', error));
+
     };
 
     componentDidUpdate(prevProps, prevState) {
@@ -76,7 +88,21 @@ export class CurrentLocation extends React.Component {
             map.panTo(center);
         }
     }
+    onMarkerClick = (props, marker, e) =>
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
 
+    onClose = props => {
+        if (this.state.showingInfoWindow) {
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            });
+        }
+    };
     componentDidMount() {
         if (this.props.centerAroundCurrentLocation) {
             if (navigator && navigator.geolocation) {
@@ -85,8 +111,10 @@ export class CurrentLocation extends React.Component {
                     this.setState({
                         currentLocation: {
                             lat: coords.latitude,
-                            lng: coords.longitude
-                        }
+                            lng: coords.longitude,
+
+                        },
+                        searchData: [],
                     });
                 });
             }
@@ -99,12 +127,10 @@ export class CurrentLocation extends React.Component {
             // checks if google is available
             const {google} = this.props;
             const maps = google.maps;
-
             const mapRef = this.refs.map;
 
             // reference to the actual DOM element
             const node = ReactDOM.findDOMNode(mapRef);
-
             let {zoom} = this.props;
             const {lat, lng} = this.state.currentLocation;
             const center = new maps.LatLng(lat, lng);
@@ -120,7 +146,52 @@ export class CurrentLocation extends React.Component {
             this.map = new maps.Map(node, mapConfig);
         }
     }
+    loadNewMapWithMarkers() {
+        if (this.props && this.props.google) {
+            // checks if google is available
+            const {google} = this.props;
+            const maps = google.maps;
+            const mapRef = this.refs.map;
 
+            // reference to the actual DOM element
+            const node = ReactDOM.findDOMNode(mapRef);
+            let {zoom} = this.props;
+            const {lat, lng} = this.state.currentLocation;
+            const center = new maps.LatLng(lat, lng);
+            const mapConfig = Object.assign(
+                {},
+                {
+                    center: center,
+                    zoom: zoom
+                }
+            );
+
+            // maps.Map() is constructor that instantiates the map
+            this.map = new maps.Map(node, mapConfig);
+            for(let i=0;i<this.state.searchData.length;i++){
+                let marker = new google.maps.Marker({
+                    position: this.state.searchData[i].geometry.location,
+                    name: this.state.searchData[i].name,
+                });
+                marker.setMap(this.map);
+            }
+        }
+    }
+    getSearchData = (lat, lng) => {
+        axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=1500&type=hospital&keyword=planned&key=AIzaSyCgWEqyR2d9b9zmBZEPhSl_aSYthVyZJxc`)
+            .then(response => {
+                    this.setState({
+                        searchData: response.data.results,
+                        loading: false
+                    },  () => {
+                        this.loadNewMapWithMarkers();
+                    });
+                    console.log(this.state.searchData);
+                    console.log("TODOROKIII");
+
+                }
+            );
+    };
     renderChildren() {
         const {children} = this.props;
 
@@ -178,6 +249,8 @@ export class CurrentLocation extends React.Component {
                         </div>
                     )}
                 </PlacesAutocomplete>
+
+
                 <div style={style} ref="map">
                     Loading map...
                 </div>
@@ -185,8 +258,6 @@ export class CurrentLocation extends React.Component {
             </div>
         );
     }
-
-
 }
 
 export default CurrentLocation;
