@@ -7,12 +7,13 @@ import CurrentLocation from './Map';
 
 const LocationContainer = styled.div`
     margin-top: 10%;
-    margin-left:50%;
+    margin-left:35%;
     margin-right:50%;
 `;
 const mapStyles = {
     width: '100%',
-    height: '100%'
+    height: '100%',
+
 };
 
 export class LocationSearchInput extends Component {
@@ -43,17 +44,6 @@ export class LocationSearchInput extends Component {
 
         return (
             <LocationContainer>
-                <SearchBox
-                    width="400"
-                    id="hospital"
-                    onPlaceChanged={({ original, parsed }) => {
-                        console.log(original);
-                        console.log(parsed);
-                        // Do whatever you want
-                        // original is an array of Google Maps PlaceResult Object
-                        // parsed is an array of parsed address components
-                    }}
-                />
                 <CurrentLocation
                     centerAroundCurrentLocation
                     google={this.props.google}
