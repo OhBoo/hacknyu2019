@@ -7,24 +7,24 @@ import Forum from './Forum';
 import Resources from './Resources';
 import Header from './header';
 import LocationSearchInput from './LocationSearchInput';
-import { Parallax, Background } from 'react-parallax';
 
 import resourceImg from './assets/SHB.png';
-import blue from './assets/blue.png';
 
 const Container = styled.div`
 
 `;
 const ButtonDiv = styled.div`
-    margin-top:20%;
+    margin-top:10%;
+    border-top: 1px;
 `;
 
 
 export default class App extends Component {
     render() {
         const Home = () => (
-            <Container>
+            <Container >
                 <Header/>
+
                     <center style={{fontSize: 20, marginTop: 20, marginLeft: 40, marginBottom:10}}> 
                         <Grid style={{height: 700}} container spacing={48}>
                             <LocationSearchInput/>
@@ -63,6 +63,11 @@ export default class App extends Component {
                         </Grid>
                     </div>
                 </ButtonDiv>
+                    <center style={{backgroundImage: "linear-gradient(#fff, #1c95a8)"}}>
+                        <Grid style={{height: 600, maxWidth: '90%'}} container spacing={48}>
+                            <LocationSearchInput/>
+                        </Grid>
+                    </center>
             </Container>
 
         );

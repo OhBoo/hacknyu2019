@@ -6,10 +6,7 @@ import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
 } from 'react-places-autocomplete';
-import {Marker} from "google-maps-react";
 import Hospital from './assets/hospital.png';
-
-
 
 const mapStyles = {
     map: {
@@ -22,9 +19,12 @@ const Results = styled.div`
   width: 400px !important;
 `;
 const SearchInput = styled.input`
+  margin-left: 155px;
+  margin-bottom: 25px;
   width: 400px !important;
   height: 25px;
 `;
+
 
 export class CurrentLocation extends React.Component {
 
@@ -50,14 +50,13 @@ export class CurrentLocation extends React.Component {
             .then(results => getLatLng(results[0]))
             .then(latLng => {
                 console.log('Success', latLng);
-                this.getSearchData(latLng.lat,latLng.lng);
+                this.getSearchData(latLng.lat, latLng.lng);
                 this.setState({
                     currentLocation: {
                         lat: latLng.lat,
                         lng: latLng.lng
                     }
                 });
-
 
 
                 // this.state.searchData.forEach(function(element) {
@@ -101,8 +100,8 @@ export class CurrentLocation extends React.Component {
                             lng: coords.longitude,
                         },
                         searchData: [],
-                    },  () => {
-                        this.getSearchData(coords.latitude,coords.longitude);
+                    }, () => {
+                        this.getSearchData(coords.latitude, coords.longitude);
                     });
                 });
             }
@@ -134,6 +133,7 @@ export class CurrentLocation extends React.Component {
             this.map = new maps.Map(node, mapConfig);
         }
     }
+
     loadNewMapWithMarkers() {
         if (this.props && this.props.google) {
             // checks if google is available
@@ -156,7 +156,7 @@ export class CurrentLocation extends React.Component {
 
             // maps.Map() is constructor that instantiates the map
             this.map = new maps.Map(node, mapConfig);
-            for(let i=0;i<this.state.searchData.length;i++){
+            for (let i = 0; i < this.state.searchData.length; i++) {
                 let marker = new google.maps.Marker({
                     position: this.state.searchData[i].geometry.location,
                     name: this.state.searchData[i].name,
@@ -171,13 +171,14 @@ export class CurrentLocation extends React.Component {
             marker.setMap(this.map);
         }
     }
+
     getSearchData = (lat, lng) => {
         axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=3000&type=hospital&keyword=planned&key=AIzaSyCgWEqyR2d9b9zmBZEPhSl_aSYthVyZJxc`)
             .then(response => {
                     this.setState({
                         searchData: response.data.results,
                         loading: false
-                    },  () => {
+                    }, () => {
                         this.loadNewMapWithMarkers();
                     });
                     console.log(this.state.searchData);
@@ -186,6 +187,7 @@ export class CurrentLocation extends React.Component {
                 }
             );
     };
+
     renderChildren() {
         const {children} = this.props;
 
@@ -205,6 +207,7 @@ export class CurrentLocation extends React.Component {
         const style = Object.assign({}, mapStyles.map);
         return (
             <div>
+
                 <PlacesAutocomplete
                     value={this.state.address}
                     onChange={this.handleChange}
@@ -214,7 +217,7 @@ export class CurrentLocation extends React.Component {
                         <div>
                             <SearchInput
                                 {...getInputProps({
-                                    placeholder: 'Take a Journey ...',
+                                    placeholder: 'Find a clinic in ...',
                                     className: 'form-control mr-sm-2',
                                 })}
                             />
