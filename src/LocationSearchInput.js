@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react';
 import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import CurrentLocation from './Map';
-
+import Grid from '@material-ui/core/Grid';
 
 const LocationContainer = styled.div`
     margin-top: 10%;
@@ -58,15 +58,19 @@ export class LocationSearchInput extends Component {
                         onClick={this.onMarkerClick}
                         name={'Your location'}
                     />
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}
-                        onClose={this.onClose}
-                    >
-                        <div>
-                            <h4>{this.state.selectedPlace.name}</h4>
-                        </div>
-                    </InfoWindow>
+                    <center>
+                        <Grid style={{maxWidth: '90%'}} container spacing={48}>
+                            <InfoWindow
+                                marker={this.state.activeMarker}
+                                visible={this.state.showingInfoWindow}
+                                onClose={this.onClose}
+                            >
+                                <div>
+                                    <h4>{this.state.selectedPlace.name}</h4>
+                                </div>
+                            </InfoWindow>
+                        </Grid>
+                    </center>
 
                 </CurrentLocation>
 

@@ -7,10 +7,8 @@ import Forum from './Forum';
 import Resources from './Resources';
 import Header from './header';
 import LocationSearchInput from './LocationSearchInput';
-import { Parallax, Background } from 'react-parallax';
 
 import resourceImg from './assets/SHB.png';
-import blue from './assets/blue.png';
 
 const Container = styled.div`
 
@@ -24,10 +22,8 @@ const ButtonDiv = styled.div`
 export default class App extends Component {
     render() {
         const Home = () => (
-            <Container>
+            <Container >
                 <Header/>
-
-
                 <ButtonDiv>
                     <div>
                         <Grid container spacing={24} align="center">
@@ -60,17 +56,11 @@ export default class App extends Component {
                         </Grid>
                     </div>
                 </ButtonDiv>
-                <Parallax
-                    blur={0}
-                    bgImage={blue}
-                    strength={200}
-                >
-                    <center style={{fontSize: 20, marginTop: 20, marginLeft: "13%", marginBottom:10}}>
-                        <Grid style={{height: 700}} container spacing={48}>
+                    <center style={{backgroundImage: "linear-gradient(#fff, #1c95a8)"}}>
+                        <Grid style={{height: 600, maxWidth: '90%'}} container spacing={48}>
                             <LocationSearchInput/>
                         </Grid>
                     </center>
-                </Parallax>
             </Container>
 
         );
