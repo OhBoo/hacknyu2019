@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import Header from './header';
-import TopBar from "./topbar";
 import Discuss from "./assets/smb-discussion-panel-og.jpg"
 
 const Title = styled.h1`
@@ -54,7 +54,6 @@ export default class Forum extends Component {
         return (
             <div>
                 <Header/>
-                <TopBar/>
                 <Title>
                     Questions? Ask them here.
                 </Title>
