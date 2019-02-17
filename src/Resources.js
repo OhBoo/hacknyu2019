@@ -6,6 +6,10 @@ import HMI from "./assets/hmi.jpg";
 import PP from "./assets/PP.jpg";
 import Education from "./assets/education.jpg";
 
+const PageTitle = styled.h1`
+    margin-left: 3%;
+`;
+
 const Title = styled.h1`
     padding-left: 2%;
     font-size: 2em;
@@ -15,6 +19,7 @@ const Title = styled.h1`
     background-color:#eeeeee;
     color: #001e3b;
 `;
+
 const ResourceTitle = styled.h2`
     margin-left: 5%;
     font-family: Ubuntu;
@@ -32,24 +37,25 @@ const ResourceContainer = styled.div`
 const ResourceDiv = styled.div`
     width: 50%;
 `;
-const ResourceCaptionDiv = styled.div`
-   text-align: center;
-    width: 100%;
-    height: 100%;
-    background-color: #3eb1cb;
-`;
+
 const ResourceContentDiv = styled.div`
     padding-top 1%;
     padding-bottom: 3%;
 `;
 const ResourceCaption = styled.h2`
-   display: inline-block;
+    display: inline-block;
     margin-left: 5%;
     margin-top: 29%;
     font-family: Ubuntu;
     font-weight: 300;
     font-size: 2em;
     text-align: center;
+`;
+const ResourceCaptionDiv = styled.div`
+   text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1c95a8;
 `;
 const ImgStyle = styled.img`
     margin-left: 8%;
@@ -61,16 +67,16 @@ const ImgStyle = styled.img`
 const PageContainer = styled.div`
 background-color: #eeeeee;
 padding: 1%;
-padding-bottom: 1%;
+padding-bottom: 5%;
 `;
 export default class Resources extends Component {
     render() {
         return (
             <div>
                 <Header/>
-                <Title>
-                    <u>Resources</u>
-                </Title>
+                <PageTitle>
+                    Resources
+                </PageTitle>
                 <PageContainer>
                     <ResourceContainer>
                         <ResourceDiv>

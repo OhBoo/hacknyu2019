@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Grid from '@material-ui/core/Grid';
 import Header from './header';
 import Discuss from "./assets/smb-discussion-panel-og.jpg"
 
@@ -61,12 +62,14 @@ export default class Forum extends Component {
                     <ResourceContainer>
                         <ResourceContentDiv>
                             <ResourceTitle>Enter The Forum</ResourceTitle>
-                            <Resource>
-                                <a href="http://localhost:4567/"
-                                  target="_blank">
-                                    <ImgStyle src={Discuss}/>
-                                </a>
-                            </Resource>
+                            <Grid style={{maxWidth: '90%'}} container spacing={16}>
+                                <Resource>
+                                    <a href="http://localhost:4567/"
+                                      target="_blank">
+                                        <ImgStyle src={Discuss}/>
+                                    </a>
+                                </Resource>
+                            </Grid>
                         </ResourceContentDiv>
                     </ResourceContainer>
                 </PageContainer>
