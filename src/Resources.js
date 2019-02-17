@@ -30,7 +30,7 @@ const Resource = styled.h2`
 font-size: 25px;
 `;
 const ResourceContainer = styled.div`
-      display: flex;
+    display: flex;
     flex-direction: row;
     background-color: #ffffff;
 `;
@@ -82,26 +82,25 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceContentDiv>
                                 <ResourceTitle> Teen Clinics </ResourceTitle>
-                                    <Resource>
-                                        <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/std/teens-clinics.pdf"
-                                           target="_blank"
-                                           rel="noopener noreferrer" >
-                                            <ImgStyle src={Teens}/>
-                                        </a>
-                                    </Resource>
+                                <Resource>
+                                    <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/std/teens-clinics.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <ImgStyle src={Teens}/>
+                                    </a>
+                                </Resource>
                             </ResourceContentDiv>
                         </ResourceDiv>
-
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Looking for sexual health resources in NYC? Start here.</i>
+                                    <i>Looking for informative, credible sexual health resources in NYC? Start here.</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
                     </ResourceContainer>
 
-                    <ResourceContainer> 
+                    <ResourceContainer>
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
@@ -113,13 +112,13 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceContentDiv>
                                 <ResourceTitle>The Hetrick-Martin Institute</ResourceTitle>
-                                    <Resource>
-                                        <a href="https://hmi.org/" target="_blank" rel="noopener noreferrer">
-                                            <ImgStyle src={HMI}/>
-                                        </a>
+                                <Resource>
+                                    <a href="https://hmi.org/" target="_blank" rel="noopener noreferrer">
+                                        <ImgStyle src={HMI}/>
+                                    </a>
                                 </Resource>
                             </ResourceContentDiv>
-                        </ResourceDiv>  
+                        </ResourceDiv>
                     </ResourceContainer>
 
                     <ResourceContainer>
@@ -138,7 +137,8 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Questions about birth control? Don't know what's right for you? Here are your answers.</i>
+                                    <i>Questions about birth control? Don't know what's right for you? Here are your
+                                        answers.</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
