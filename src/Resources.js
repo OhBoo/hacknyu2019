@@ -8,13 +8,11 @@ import Education from "./assets/education.jpg";
 
 const Title = styled.h1`
     padding-left: 2%;
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 0;
     font-family: Ubuntu;
     font-weight: 500;
     background-color:#eeeeee;
-    margin-top: 0;
-    padding-top: 1%;
     color: #001e3b;
 `;
 const ResourceTitle = styled.h2`
@@ -45,9 +43,7 @@ const ResourceContentDiv = styled.div`
     padding-bottom: 3%;
 `;
 const ResourceCaption = styled.h2`
-       display: inline-block;
-    margin-left: 5%;
-    margin-top: 29%;
+    display: inline-block;
     font-family: Ubuntu;
     font-weight: 300;
     font-size: 2em;
@@ -66,7 +62,6 @@ padding: 1%;
 padding-bottom: 1%;
 `;
 export default class Resources extends Component {
-
     render() {
         return (
             <div>
@@ -76,18 +71,16 @@ export default class Resources extends Component {
                 </Title>
                 <PageContainer>
                     <ResourceContainer>
-                        <ResourceDiv>
                             <ResourceContentDiv>
-                                <ResourceTitle>Teen Clinics</ResourceTitle>
-                                <Resource>
-                                    <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/std/teens-clinics.pdf"
-                                       target="_blank"
-                                       rel="noopener noreferrer" >
-                                        <ImgStyle src={Teens}/>
-                                    </a>
-                                </Resource>
+                                <ResourceTitle> Teen Clinics </ResourceTitle>
+                                    <Resource>
+                                        <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/std/teens-clinics.pdf"
+                                           target="_blank"
+                                           rel="noopener noreferrer" >
+                                            <ImgStyle src={Teens}/>
+                                        </a>
+                                    </Resource>
                             </ResourceContentDiv>
-                        </ResourceDiv>
 
                         <ResourceDiv>
                             <ResourceCaptionDiv>
@@ -97,7 +90,8 @@ export default class Resources extends Component {
                             </ResourceCaptionDiv>
                         </ResourceDiv>
                     </ResourceContainer>
-                    <ResourceContainer>
+
+                    <ResourceContainer> 
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
@@ -105,18 +99,19 @@ export default class Resources extends Component {
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
+
                         <ResourceDiv>
                             <ResourceContentDiv>
                                 <ResourceTitle>The Hetrick-Martin Institute</ResourceTitle>
-                                <Resource>
-                                    <a href="https://hmi.org/" target="_blank" rel="noopener noreferrer">
-                                        <ImgStyle src={HMI}/>
-                                    </a>
-
+                                    <Resource>
+                                        <a href="https://hmi.org/" target="_blank" rel="noopener noreferrer">
+                                            <ImgStyle src={HMI}/>
+                                        </a>
                                 </Resource>
                             </ResourceContentDiv>
-                        </ResourceDiv>
+                        </ResourceDiv>  
                     </ResourceContainer>
+
                     <ResourceContainer>
                         <ResourceDiv>
                             <ResourceContentDiv>
@@ -138,6 +133,7 @@ export default class Resources extends Component {
                             </ResourceCaptionDiv>
                         </ResourceDiv>
                     </ResourceContainer>
+
                     <ResourceContainer>
                         <ResourceDiv>
                             <ResourceCaptionDiv>
@@ -146,6 +142,7 @@ export default class Resources extends Component {
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
+
                         <ResourceDiv>
                             <ResourceContentDiv>
                                 <ResourceTitle>Cindy Lee Alves</ResourceTitle>
@@ -156,7 +153,6 @@ export default class Resources extends Component {
                                 </Resource>
                             </ResourceContentDiv>
                         </ResourceDiv>
-
                     </ResourceContainer>
                 </PageContainer>
             </div>

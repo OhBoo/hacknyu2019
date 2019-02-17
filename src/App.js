@@ -23,9 +23,10 @@ export default class App extends Component {
             <Container>
                 <Header/>
                 <LocationSearchInput/>
+
                 <ButtonDiv>
-                    <div style={{padding: 70}}>
-                        <Grid style={{height: 500}} container spacing={32} direction="row" align="center">
+                    <div>
+                        <Grid style={{height: 300}} container spacing={16} direction="row" align="center">
                             <Grid item md zeroMinWidth>
                                 <a href="http://localhost:3000/Articles">
                                     <img
