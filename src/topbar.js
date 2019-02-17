@@ -45,7 +45,7 @@ class TopBar extends React.Component{
 		return(
 			<div id="topNav">
 				<Hidden xsDown>
-					<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 2, display: "flex", textAlign: "center"}} >
+					<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1, display: "flex", textAlign: "center"}} >
 						<Tabs>
 							<Grid container spacing={48}>
 								<Grid item lg={24}>
