@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import { GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react';
-import { SearchBox } from '@loadup/react-google-places-autocomplete'
+import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import CurrentLocation from './Map';
 
 
