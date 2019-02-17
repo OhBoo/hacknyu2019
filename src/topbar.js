@@ -47,8 +47,8 @@ class TopBar extends React.Component{
 				<Hidden xsDown>
 					<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 1, display: "flex", textAlign: "center"}} >
 						<Tabs>
-							<Grid container spacing={48}>
-								<Grid item lg={24}>
+							<Grid container spacing={48} >
+								<Grid item lg={24} >
 								    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
 					            		<Tab label = "Articles" value={0} />
 					            	</Link>	

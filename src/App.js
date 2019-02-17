@@ -25,17 +25,11 @@ export default class App extends Component {
         const Home = () => (
             <Container>
                 <Header/>
-                <Parallax
-                    blur={0}
-                    bgImage={blue}
-                    strength={200}
-                    >
                     <center style={{fontSize: 20, marginTop: 20, marginLeft: 40, marginBottom:10}}> 
                         <Grid style={{height: 700}} container spacing={48}>
                             <LocationSearchInput/>
                         </Grid>
                     </center>
-                </Parallax>
 
                 <ButtonDiv>
                     <div>
