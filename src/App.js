@@ -6,7 +6,6 @@ import Articles from './Articles';
 import Forum from './Forum';
 import Resources from './Resources';
 import Header from './header';
-
 import LocationSearchInput from './LocationSearchInput';
 
 const Container = styled.div`
@@ -23,14 +22,7 @@ export default class App extends Component {
         const Home = () => (
             <Container>
                 <Header/>
-                <div>
-                    <Grid container spacing={16} style={{height: 500, padding:40}} >
-                        <Grid item md zeroMinWidth>
-                            <LocationSearchInput/>
-                        </Grid>
-                    </Grid>
-                </div>
-
+                <LocationSearchInput/>
 
                 <ButtonDiv>
                     <div>

@@ -1,30 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem';
-import Button from '@material-ui/core/Button';
 
 import TopBar from './topbar.js';
 
 const style = {
-		backgroundColor: '',
-	}
-
-const colors = {
-  white: '#fff',
-  black: '#000',
-  cambridgeblue:'#96C2C1',
-  pastelgrey:'#C7C8C4',
+    backgroundColor: '',
 }
 
-export default class Header extends React.Component{
+
+export default class Header extends React.Component {
 
 	render()
 	{
-		 const { anchorEl } = this.state;
 		return(
 
 			<div id = "pageTop" style = {style}>
@@ -79,4 +69,6 @@ export default class Header extends React.Component{
 		)
 	}
 }
+
+
 

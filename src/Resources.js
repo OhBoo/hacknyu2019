@@ -27,7 +27,7 @@ font-size: 25px;
 const ResourceContainer = styled.div`
       display: flex;
     flex-direction: row;
-    background-color: #ffffff;
+    background-color: #EEEEEE;
 `;
 const ResourceDiv = styled.div`
     width: 50%;
@@ -52,8 +52,9 @@ const ResourceCaption = styled.h2`
 const ImgStyle = styled.img`
     margin-left: 8%;
     width:80%;
-    height:60%; 
-  
+    height:60%;
+    overflow: hidden;
+
 `;
 const PageContainer = styled.div`
 background-color: #eeeeee;
@@ -66,7 +67,7 @@ export default class Resources extends Component {
             <div>
                 <Header/>
                 <Title>
-                    Resources
+                    <u>Resources</u>
                 </Title>
                 <PageContainer>
                     <ResourceContainer>
@@ -84,7 +85,7 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Information Regarding Sexual Health Clinics for Teens</i>
+                                    <i>Looking for sexual health resources in NYC? Start here.</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
@@ -94,7 +95,7 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Services for LGBTQ Youth in NY and NJ</i>
+                                    <i>Services for LGBTQ youth in New York and New Jersey</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
@@ -127,7 +128,7 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Planned Parenthood Information</i>
+                                    <i>Questions about birth control? Don't know what's right for you? Here are your answers.</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
@@ -137,7 +138,7 @@ export default class Resources extends Component {
                         <ResourceDiv>
                             <ResourceCaptionDiv>
                                 <ResourceCaption>
-                                    <i>Cindy Lee Alves Information</i>
+                                    <i>A sex educator with decades of experience providing workshops and coaching</i>
                                 </ResourceCaption>
                             </ResourceCaptionDiv>
                         </ResourceDiv>
