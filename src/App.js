@@ -7,9 +7,12 @@ import Forum from './Forum';
 import Resources from './Resources';
 import Header from './header';
 import LocationSearchInput from './LocationSearchInput';
+import { Parallax, Background } from 'react-parallax';
+
+import resourceImg from './assets/SHB.png';
+import blue from './assets/blue.png';
 
 const Container = styled.div`
-
 
 `;
 const ButtonDiv = styled.div`
@@ -22,16 +25,26 @@ export default class App extends Component {
         const Home = () => (
             <Container>
                 <Header/>
-                <LocationSearchInput/>
+                <Parallax
+                    blur={0}
+                    bgImage={blue}
+                    strength={200}
+                    >
+                    <center style={{fontSize: 20, marginTop: 20, marginLeft: 40, marginBottom:10}}> 
+                        <Grid style={{height: 700}} container spacing={48}>
+                            <LocationSearchInput/>
+                        </Grid>
+                    </center>
+                </Parallax>
 
                 <ButtonDiv>
                     <div>
-                        <Grid style={{height: 300}} container spacing={16} direction="row" align="center">
-                            <Grid item md zeroMinWidth>
+                        <Grid container spacing={24} align="center">
+                            <Grid item md zeroMinWidth style={{height: 400}} >
                                 <a href="http://localhost:3000/Articles">
                                     <img
-                                        src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
-                                        width="360" height="180"/>
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVB1AxNgGtwM3ot4J1tSRuRRRcwoSDxWv8L1CRwww0kGCFVmcxag"
+                                        width="180" height="180"/>
                                 </a>
                                 <h2> Articles </h2>
                             </Grid>
@@ -39,8 +52,8 @@ export default class App extends Component {
                             <Grid item md zeroMinWidth>
                                 <a href="http://localhost:3000/Resources">
                                     <img
-                                        src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
-                                        width="360" height="180"/>
+                                        src={resourceImg}
+                                        width="180" height="180"/>
                                 </a>
                                 <h2> Resources </h2>
                             </Grid>
@@ -48,8 +61,8 @@ export default class App extends Component {
                             <Grid item md zeroMinWidth>
                                 <a href="http://localhost:3000/Forum">
                                     <img
-                                        src="http://www.evanstonoutreach.org/wp-content/uploads/2018/04/sham_2016-1000x641.jpg"
-                                        width="360" height="180"/>
+                                        src="https://www.kilcooleywomenscentre.co.uk/media/uploads/sexualhealth.jpg"
+                                        width="200" height="180"/>
                                 </a>
                                 <h2> Forum </h2>
                             </Grid>

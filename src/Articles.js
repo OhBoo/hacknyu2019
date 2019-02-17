@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import Header from './header';
 
-
 const PageTitle = styled.h1`
     margin-left: 3%;
 `;
-
 
 const ArticleImg = styled.img`
 `;
@@ -39,7 +37,7 @@ const ArticleCaptionDiv = styled.div`
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: #3eb1cb;
+    background-color: #1c95a8;
 
 
 `;

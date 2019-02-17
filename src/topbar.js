@@ -28,7 +28,7 @@ class TopBar extends React.Component{
 
  	handleToggle = () => {
     this.setState(state => ({ open: !state.open }));
- 	 };z
+ 	 };
 
  	 handleCloseMenu = event => {
     if (this.anchorEl.contains(event.target)) {
@@ -45,10 +45,10 @@ class TopBar extends React.Component{
 		return(
 			<div id="topNav">
 				<Hidden xsDown>
-					<AppBar position="static" style = {{backgroundColor: 'white', flexGrow: 1,display: "flex", textAlign: "center"}} >
+					<AppBar position="static" style = {{backgroundColor: 'black', flexGrow: 2, display: "flex", textAlign: "center"}} >
 						<Tabs>
 							<Grid container spacing={48}>
-								<Grid item xs={12}>
+								<Grid item lg={24}>
 								    <Link to="/Articles" style= {{color: 'white', fontFamily: 'Ubuntu', textDecoration:'none'}}>
 					            		<Tab label = "Articles" value={0} />
 					            	</Link>	
@@ -57,20 +57,17 @@ class TopBar extends React.Component{
 					            		<Tab label = "Resources" value={0} />
 					            	</Link>
 
-
 					            	<Link to="/Forum" style= {{color: 'white',fontFamily: 'Ubuntu',textDecoration:'none' }}>
 					            		<Tab label = "Forum" value={0} />
-
 					            	</Link> 
 					            </Grid>
-							
 							</Grid>
 						</Tabs>
 					</AppBar>
 				</Hidden>	            		
 
 				<Hidden smUp>
-					<AppBar position="static" style = {{backgroundColor: 'black', marginBottom: 20, marginTop: 25, flexGrow: 1,display: "flex"}} >
+					<AppBar position="static" style = {{backgroundColor: 'black', marginBottom: 20, marginTop: 25, flexGrow: 1, display: "flex"}} >
 						<IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
              			 	<MenuIcon />
           			  	</IconButton>
