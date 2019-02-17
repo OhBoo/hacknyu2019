@@ -7,9 +7,6 @@ const PageTitle = styled.h1`
     margin-left: 3%;
 `;
 
-
-const ArticleImg = styled.img`
-`;
 const ArticleVidDiv = styled.div`
     margin-left: 3%;
     padding-left: 2%;
