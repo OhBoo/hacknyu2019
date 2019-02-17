@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react';
+import { GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react';
+import { SearchBox } from '@loadup/react-google-places-autocomplete'
 import CurrentLocation from './Map';
+
 
 const LocationContainer = styled.div`
     margin-top: 10%;
@@ -15,9 +17,9 @@ const mapStyles = {
 
 export class LocationSearchInput extends Component {
     state = {
-        showingInfoWindow: false,
-        activeMarker: {},
-        selectedPlace: {}
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {}
     };
 
 
@@ -38,8 +40,20 @@ export class LocationSearchInput extends Component {
     };
 
     render() {
+
         return (
             <LocationContainer>
+                <SearchBox
+                    width="400"
+                    id="hospital"
+                    onPlaceChanged={({ original, parsed }) => {
+                        console.log(original);
+                        console.log(parsed);
+                        // Do whatever you want
+                        // original is an array of Google Maps PlaceResult Object
+                        // parsed is an array of parsed address components
+                    }}
+                />
                 <CurrentLocation
                     centerAroundCurrentLocation
                     google={this.props.google}
@@ -65,6 +79,7 @@ export class LocationSearchInput extends Component {
                     </InfoWindow>
 
                 </CurrentLocation>
+
             </LocationContainer>
         );
     }
