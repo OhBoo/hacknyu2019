@@ -7,6 +7,7 @@ import PlacesAutocomplete, {
     getLatLng,
 } from 'react-places-autocomplete';
 import {Marker} from "google-maps-react";
+import Hospital from './assets/hospital.png';
 
 
 
@@ -88,21 +89,7 @@ export class CurrentLocation extends React.Component {
             map.panTo(center);
         }
     }
-    onMarkerClick = (props, marker, e) =>
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true
-        });
 
-    onClose = props => {
-        if (this.state.showingInfoWindow) {
-            this.setState({
-                showingInfoWindow: false,
-                activeMarker: null
-            });
-        }
-    };
     componentDidMount() {
         if (this.props.centerAroundCurrentLocation) {
             if (navigator && navigator.geolocation) {
@@ -112,9 +99,10 @@ export class CurrentLocation extends React.Component {
                         currentLocation: {
                             lat: coords.latitude,
                             lng: coords.longitude,
-
                         },
                         searchData: [],
+                    },  () => {
+                        this.getSearchData(coords.latitude,coords.longitude);
                     });
                 });
             }
@@ -172,13 +160,19 @@ export class CurrentLocation extends React.Component {
                 let marker = new google.maps.Marker({
                     position: this.state.searchData[i].geometry.location,
                     name: this.state.searchData[i].name,
+                    icon: Hospital,
                 });
                 marker.setMap(this.map);
             }
+            let marker = new google.maps.Marker({
+                position: this.state.currentLocation,
+                name: "Your location",
+            });
+            marker.setMap(this.map);
         }
     }
     getSearchData = (lat, lng) => {
-        axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=1500&type=hospital&keyword=planned&key=AIzaSyCgWEqyR2d9b9zmBZEPhSl_aSYthVyZJxc`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=3000&type=hospital&keyword=planned&key=AIzaSyCgWEqyR2d9b9zmBZEPhSl_aSYthVyZJxc`)
             .then(response => {
                     this.setState({
                         searchData: response.data.results,
